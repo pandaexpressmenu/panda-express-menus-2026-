@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Panda Express Menus 2026 · Ultimate Guide with Prices & Calories</title>
+    <meta name="description"
+        content="Complete 2026 Panda Express menu guide: prices, calories, Wok Smart, family meals, and secret hacks. Mobile friendly with animations.">
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS-like custom but we use pure js + css keyframes -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #fef7ed;
+            color: #261f17;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* animated gradient background for hero */
+        .hero {
+            position: relative;
+            background: linear-gradient(115deg, #1e2c1c 0%, #2c3e2a 45%, #3f2a1f 100%);
+            background-size: 200% 200%;
+            animation: gradientFlow 12s ease infinite;
+            padding: 3rem 1.5rem 5rem 1.5rem;
+            border-bottom-left-radius: 48px;
+            border-bottom-right-radius: 48px;
+            overflow: hidden;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .hero-bg-img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.18;
+            mix-blend-mode: lighten;
+            pointer-events: none;
+            transform: scaleX(-1);
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 1280px;
+            margin: 0 auto;
+            z-index: 3;
+            animation: slideUpFade 0.9s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+        }
+
+        @keyframes slideUpFade {
+            0% {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .blog-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 215, 170, 0.2);
+            backdrop-filter: blur(6px);
+            padding: 0.5rem 1.3rem;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 210, 130, 0.6);
+            margin-bottom: 1.3rem;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            background: linear-gradient(125deg, #fff6e5, #FFD966, #FFB347);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1.2rem;
+        }
+
+        /* main container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2.2rem 1.5rem 4rem;
+        }
+
+        /* blog card */
+        .blog-card {
+            background: #ffffff;
+            border-radius: 44px;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.12);
+            padding: 2.2rem 2.5rem;
+            transition: transform 0.25s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 32px 55px -14px rgba(0, 0, 0, 0.2);
+        }
+
+        /* all content styling */
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem 0;
+            background: linear-gradient(120deg, #b64926, #d46b2e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+            border-left: 6px solid #e67e22;
+            padding-left: 18px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.8rem;
+            color: #bc4e2c;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+            color: #2c2a24;
+        }
+
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.6rem 0;
+            background: #fffaf2;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03);
+        }
+
+        .menu-table th {
+            background: #e9d6b0;
+            padding: 14px 12px;
+            font-weight: 700;
+            color: #2d3e1f;
+        }
+
+        .menu-table td {
+            padding: 11px 12px;
+            border-bottom: 1px solid #f0e2cf;
+        }
+
+        .callout-glow {
+            background: linear-gradient(125deg, #fcf5e8, #f9ebd2);
+            padding: 1.5rem;
+            border-radius: 32px;
+            border-left: 8px solid #e67e22;
+            margin: 1.8rem 0;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        /* ---------- FAQ SECTION with AWESOME ANIMATION ---------- */
+        .faq-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .faq-item {
+            background: #fffbf5;
+            border-radius: 28px;
+            transition: all 0.3s ease;
+            border: 1px solid #ffe3c6;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 1.8rem;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            background: #fff7ef;
+            transition: background 0.2s;
+        }
+
+        .faq-question i {
+            font-size: 1.3rem;
+            color: #dd7642;
+            transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-question:hover {
+            background: #ffefdf;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            padding: 0 1.8rem;
+            overflow: hidden;
+            transition: max-height 0.6s cubic-bezier(0.33, 1, 0.68, 1), padding 0.3s ease;
+            background: #ffffff;
+            border-top: 0px solid transparent;
+            line-height: 1.55;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 280px;
+            /* enough for all answer content */
+            padding: 0.2rem 1.8rem 1.2rem 1.8rem;
+            border-top: 1px solid #f7e5d2;
+        }
+
+        .faq-answer p {
+            margin-top: 0.8rem;
+            margin-bottom: 0.6rem;
+            font-weight: 400;
+            color: #3a3127;
+        }
+
+        /* scroll reveal animation for sections */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* floating elements */
+        .btn-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #e35f21;
+            width: 52px;
+            height: 52px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s;
+            opacity: 0;
+            visibility: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            z-index: 99;
+            border: none;
+        }
+
+        .btn-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .btn-top:hover {
+            transform: scale(1.08);
+            background: #c13f0a;
+        }
+
+        footer {
+            background: #1e281c;
+            color: #d4d9bf;
+            text-align: center;
+            padding: 2rem;
+            border-top-left-radius: 32px;
+            border-top-right-radius: 32px;
+        }
+
+        @media (max-width: 700px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .blog-card {
+                padding: 1.5rem;
+            }
+
+            .faq-question {
+                padding: 1rem 1.2rem;
+                font-size: 0.95rem;
+            }
+
+            .menu-table th,
+            .menu-table td {
+                font-size: 0.8rem;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <img class="hero-bg-img"
+            src="https://images.pexels.com/photos/1251198/pexels-photo-1251198.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Asian cuisine wok and fresh ingredients">
+        <div class="hero-content">
+            <div class="blog-badge"><i class="fas fa-fire"></i> 2026 ULTIMATE MENU GUIDE</div>
+            <h1>Panda Express Menus 2026:<br>Complete Guide with Prices & Calories</h1>
+            <div class="hero-meta">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="blog-card">
+            <!-- Intro -->
+            <p>Planning a visit to Panda Express in 2026 can feel overwhelming with so many choices. The menu has
+                something for everyone, from crispy chicken dishes to fresh vegetable sides. But how do you know what to
+                pick for your budget or your health goals? This guide breaks down the complete Panda Express menus with
+                clear prices and calorie counts. You will learn about meal sizes, popular entrees, sides, and family
+                options. By the end, you can order with confidence whether you want a low calorie lunch or a big dinner
+                for the whole family.</p>
+
+            <!-- section: what you will find -->
+            <div class="scroll-reveal">
+                <h2>What You Will Find on the Panda Express Menus in 2026</h2>
+                <p>The Panda Express menus focus on American Chinese food made in woks. You can choose from several meal
+                    formats. The simplest option is the Bowl which comes with one side and one entree. The Plate gives
+                    you one side and two entrees. The Bigger Plate offers one side and three entrees. There are also
+                    family meals, a la carte items, and a kids menu called the Panda Cub Meal. Every item on the <a style="color: #75db22;" href="https://pandaexpressmenus.com/"><strong>Panda
+                    Express menus</strong></a> has a clear price and calorie listing. This makes it easier to plan your order ahead
+                    of time.</p>
+                <p>Most locations keep their menu structure the same across the United States. However prices may vary
+                    slightly by state and city. The calorie counts stay consistent because recipes are standardized. The
+                    Panda Express menus in 2026 continue to offer popular classics like Orange Chicken alongside newer
+                    items like SweetFire Chicken Breast. You can also find premium seafood and steak options for an
+                    extra charge.</p>
+            </div>
+
+            <!-- meal sizes -->
+            <div class="scroll-reveal">
+                <h2>Understanding Meal Sizes and Prices on the Panda Express Menus</h2>
+                <p>The Bowl is the smallest adult meal. It includes one side and one entree. Starting price is around
+                    $9.30. Calories range from 280 to 1,130 depending on your choices. The Plate is the middle option.
+                    It includes one side and two entrees. Starting price is around $11.10. Calories range from 430 to
+                    1,640. The Bigger Plate is the largest meal. It includes one side and three entrees. Starting price
+                    is around $12.90. Calories range from 580 to 2,150. Panda Cub Meal ~$7.80. A la carte entree or side
+                    ~$4.60.</p>
+            </div>
+
+            <!-- entrees tables -->
+            <div class="scroll-reveal">
+                <h2>Complete Entree List on the Panda Express Menus with Prices and Calories</h2>
+                <h3>Standard Entrees (No extra charge)</h3>
+                <table class="menu-table">
+                    <thead>
+                        <tr>
+                            <th>Entree</th>
+                            <th>Price</th>
+                            <th>Calories</th>
+                            <th>Protein</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Orange Chicken</td>
+                            <td>$5.40</td>
+                            <td>510</td>
+                            <td>18g</td>
+                        </tr>
+                        <tr>
+                            <td>Beijing Beef</td>
+                            <td>$5.40</td>
+                            <td>470</td>
+                            <td>14g</td>
+                        </tr>
+                        <tr>
+                            <td>Kung Pao Chicken</td>
+                            <td>$5.40</td>
+                            <td>320</td>
+                            <td>17g</td>
+                        </tr>
+                        <tr>
+                            <td>Broccoli Beef</td>
+                            <td>$5.40</td>
+                            <td>150</td>
+                            <td>9g</td>
+                        </tr>
+                        <tr>
+                            <td>Mushroom Chicken</td>
+                            <td>$5.40</td>
+                            <td>220</td>
+                            <td>13g</td>
+                        </tr>
+                        <tr>
+                            <td>Grilled Teriyaki Chicken</td>
+                            <td>$5.40</td>
+                            <td>275</td>
+                            <td>33g</td>
+                        </tr>
+                        <tr>
+                            <td>Sweet and Sour Chicken</td>
+                            <td>$5.40</td>
+                            <td>400</td>
+                            <td>17g</td>
+                        </tr>
+                        <tr>
+                            <td>String Bean Chicken Breast</td>
+                            <td>$5.40</td>
+                            <td>210</td>
+                            <td>12g</td>
+                        </tr>
+                        <tr>
+                            <td>Honey Sesame Chicken Breast</td>
+                            <td>$5.40</td>
+                            <td>340</td>
+                            <td>16g</td>
+                        </tr>
+                        <tr>
+                            <td>Black Pepper Chicken</td>
+                            <td>$5.40</td>
+                            <td>280</td>
+                            <td>13g</td>
+                        </tr>
+                        <tr>
+                            <td>SweetFire Chicken Breast</td>
+                            <td>$5.40</td>
+                            <td>380</td>
+                            <td>13g</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Premium Entrees (+$1.50 charge)</h3>
+                <table class="menu-table">
+                    <tr>
+                        <th>Premium</th>
+                        <th>Price</th>
+                        <th>Calories</th>
+                        <th>Protein</th>
+                    </tr>
+                    <tr>
+                        <td>Honey Walnut Shrimp</td>
+                        <td>$6.90</td>
+                        <td>430</td>
+                        <td>13g</td>
+                    </tr>
+                    <tr>
+                        <td>Black Pepper Sirloin Steak</td>
+                        <td>$6.90</td>
+                        <td>180</td>
+                        <td>13g</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- sides and appetizers -->
+            <div class="scroll-reveal">
+                <h2>Side Items & Appetizers</h2>
+                <table class="menu-table">
+                    <tr>
+                        <th>Side</th>
+                        <th>Price</th>
+                        <th>Calories</th>
+                    </tr>
+                    <tr>
+                        <td>Chow Mein</td>
+                        <td>$4.60</td>
+                        <td>600</td>
+                    </tr>
+                    <tr>
+                        <td>Fried Rice</td>
+                        <td>$4.60</td>
+                        <td>620</td>
+                    </tr>
+                    <tr>
+                        <td>White Steamed Rice</td>
+                        <td>$4.60</td>
+                        <td>520</td>
+                    </tr>
+                    <tr>
+                        <td>Super Greens</td>
+                        <td>$4.60</td>
+                        <td>130</td>
+                    </tr>
+                </table>
+                <p><strong>Appetizers:</strong> Chicken Egg Roll $2.10 (240 cal), Spring Roll $2.10 (190 cal), Cream
+                    Cheese Rangoon $2.10 (200 cal), Apple Pie Roll $2.10 (160 cal).</p>
+                <div class="callout-glow">
+                    <i class="fas fa-leaf"></i> <strong>Wok Smart & Healthy picks:</strong> Bowl with Super Greens +
+                    Broccoli Beef = only 280 cal. Plate with Grilled Teriyaki + Black Pepper Sirloin + Super Greens
+                    gives ~55g protein. Best value: upgrade to Bigger Plate just $1.50 more!
+                </div>
+            </div>
+
+            <!-- family meals + value -->
+            <div class="scroll-reveal">
+                <h2>Family Meals & Catering · Best Value</h2>
+                <p>The standard 5 Person Family Meal costs around $43.00 and includes three large entrees + two large
+                    sides. 2 Person Family Meal starting at $11.60. Catering: small party tray (10-12 people) ~$17,
+                    large ~$42, Ultimate Party Pack (12-16) ~$112, Grand Party Pack (18-22) ~$159, Mega Party Pack
+                    (26-30) ~$201. Panda Rewards: earn 10 points per dollar; free premium upgrade at 200 pts, free Bowl
+                    at 1250 pts, free Family Meal at 5000 pts.</p>
+                <p>Drinks: fountain soda small $2.30, medium $2.50, large $2.70. Crafted refreshers $3.40. Most
+                    locations open 10:30 AM – 9:30/10 PM.</p>
+            </div>
+
+            <div class="scroll-reveal">
+                <h2>Conclusion</h2>
+                <p>The Panda Express menus in 2026 offer a wide range of choices for every budget and diet. From the
+                    famous Orange Chicken to the healthy Super Greens, there is something for everyone. Meal sizes like
+                    the Bowl, Plate, and Bigger Plate give you control over portion size and price. The Wok Smart items
+                    help you eat healthy without giving up flavor. Family meals and catering trays provide excellent
+                    value for groups. By understanding the menu structure, prices, and calorie counts, you can order
+                    exactly what you want every time. Use this guide to plan your next visit and enjoy your meal with
+                    confidence.</p>
+            </div>
+
+            <!-- FAQ section with animated dropdowns AND smooth JS -->
+            <div class="scroll-reveal">
+                <h2><i class="fas fa-circle-question"></i> Frequently Asked Questions</h2>
+                <div class="faq-grid" id="faqContainer">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>1. What is the cheapest meal on the Panda Express menus?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The cheapest meal on the Panda Express menus is the Bowl starting around $9.30. The most
+                                affordable combination is Super Greens with Broccoli Beef. This gives you a filling meal
+                                for the lowest price.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>2. Does the Panda Express menus have gluten free options?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Panda Express does not offer certified gluten free options. Almost all entrees contain
+                                soy sauce which is brewed with wheat. Even plain rice is prepared in a kitchen that
+                                handles wheat products. People with celiac disease should be very careful.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>3. Can I order half and half sides on the Panda Express menus?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes you can ask for half and half sides at no extra charge. For example you can get half
+                                chow mein and half fried rice in one serving. This is a great way to get variety without
+                                paying more.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>4. What is the highest protein item on the Panda Express menus?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The highest protein item on the Panda Express menus is the Grilled Teriyaki Chicken with
+                                33 grams of protein per serving. For a full meal, order a Plate with Super Greens,
+                                Grilled Teriyaki Chicken, and Black Pepper Sirloin Steak. This gives you over 55 grams
+                                of protein.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>5. How do the Panda Express menus prices compare to 2020?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Panda Express menus prices have increased since 2020. A Bowl cost $7.60 in 2020 and now
+                                costs $9.30. A Plate cost $9.50 in 2020 and now costs $11.10. The increases are about 20
+                                percent over five years.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p
+                style="margin-top: 1.8rem; font-size: 0.9rem; text-align: center; border-top: 1px solid #f0e0cc; padding-top: 1rem;">
+                <i class="fas fa-utensil-spoon"></i> All data based on official Panda Express 2026 menu — prices may
+                vary slightly by location.</p>
+        </div>
+    </div>
+
+    <button class="btn-top" id="backToTopBtn" aria-label="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <footer>
+        <p>© 2026 Panda Express Menu Guide — informational blog. All trademarks belong to their respective owners.
+            Always check local prices.</p>
+    </footer>
+
+    <script>
+        // ========== 1) SCROLL REVEAL ANIMATION ==========
+        const revealElements = document.querySelectorAll('.scroll-reveal');
+        function checkReveal() {
+            const windowHeight = window.innerHeight;
+            const revealThreshold = 80;
+            revealElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < windowHeight - revealThreshold && rect.bottom > 0) {
+                    el.classList.add('revealed');
+                } else {
+                    // optional: keep once revealed? but we want stable: add class permanently after first reveal.
+                    if (el.classList.contains('revealed')) return;
+                    // if not visible yet, wait
+                }
+            });
+        }
+        // ensure all elements that become visible get class
+        window.addEventListener('scroll', checkReveal);
+        window.addEventListener('resize', checkReveal);
+        checkReveal();
+
+        // 2) FAQ toggles with beautiful smooth animation + active state
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const questionDiv = item.querySelector('.faq-question');
+            questionDiv.addEventListener('click', () => {
+                // close others if desired? but keep open/close individually for better UX
+                // but we allow multiple open as modern blog style - but you can also close others - not necessary
+                item.classList.toggle('active');
+            });
+        });
+        // optionally open first FAQ by default for engagement
+        if (faqItems.length) faqItems[0].classList.add('active');
+
+        // 3) back to top button with smooth
+        const topBtn = document.getElementById('backToTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 450) {
+                topBtn.classList.add('visible');
+            } else {
+                topBtn.classList.remove('visible');
+            }
+        });
+        topBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 4) interactive hover on tables & cards (extra css animations)
+        const tables = document.querySelectorAll('.menu-table');
+        tables.forEach(table => {
+            table.addEventListener('mouseenter', () => {
+                table.style.transition = 'all 0.2s';
+                table.style.boxShadow = '0 12px 20px rgba(0,0,0,0.07)';
+            });
+            table.addEventListener('mouseleave', () => {
+                table.style.boxShadow = '0 6px 14px rgba(0,0,0,0.03)';
+            });
+        });
+
+        // 5) subtle parallax-like for hero image on scroll? (optional)
+        window.addEventListener('scroll', () => {
+            const heroImg = document.querySelector('.hero-bg-img');
+            if (heroImg && window.scrollY < 600) {
+                const offset = window.scrollY * 0.2;
+                heroImg.style.transform = `translateY(${offset * 0.2}px)`;
+            }
+        });
+    </script>
+</body>
+
+</html>
